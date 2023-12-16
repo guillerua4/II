@@ -29,7 +29,7 @@ void loop()
     digitalWrite(Led2, HIGH);
     digitalWrite(Rele, HIGH);
     delay(10000); // Wait for 10000 millisecond(s)
-    //Apaganse o led do pin 12 e activase o relé do pin 11
+    //Apaganse o led do pin 12 e o relé do pin 11
     digitalWrite(Led2, LOW);
     digitalWrite(Rele, LOW);
     delay(4000); // Wait for 4000 millisecond(s)
