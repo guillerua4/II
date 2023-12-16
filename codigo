@@ -1,0 +1,27 @@
+// C++ code
+//
+void setup()
+{
+  //Definense como salidas os pins
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+}
+
+void loop()
+{
+  //Acendese o led do pin 13
+  digitalWrite(13, HIGH);
+  delay(10000); // Wait for 10000 millisecond(s)
+  digitalWrite(13, LOW);
+  //Apagase o led do pin 13
+  delay(4000); // Wait for 4000 millisecond(s)
+  //Acendese o led do pin 12 e activase o relé do pin 11
+  digitalWrite(12, HIGH);
+  digitalWrite(11, HIGH);
+  delay(10000); // Wait for 10000 millisecond(s)
+  //Apaganse o led do pin 12 e activase o relé do pin 11
+  digitalWrite(12, LOW);
+  digitalWrite(11, LOW);
+  delay(4000); // Wait for 4000 millisecond(s)
+}
