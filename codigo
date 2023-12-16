@@ -1,0 +1,38 @@
+// C++ code
+//
+#define Led1 13
+#define Led2 12
+#define Rele 11
+#define Pulsador 10
+bool push;
+void setup()
+{
+  //Definense como salidas os pins  
+  pinMode(Led1, OUTPUT);
+  pinMode(Led2, OUTPUT);
+  pinMode(Rele, OUTPUT);
+  pinMode(Pulsador,INPUT);
+}
+
+void loop()
+{
+  push=digitalRead(Pulsador);
+  if(push==LOW)
+  {
+    //Acendese o led do pin 13
+    digitalWrite(Led1, HIGH);
+    delay(10000); // Wait for 10000 millisecond(s)
+    digitalWrite(Led1, LOW);
+    //Apagase o led do pin 13
+    delay(4000); // Wait for 4000 millisecond(s)
+    //Acendese o led do pin 12 e activase o relé do pin 11
+    digitalWrite(Led2, HIGH);
+    digitalWrite(Rele, HIGH);
+    delay(10000); // Wait for 10000 millisecond(s)
+    //Apaganse o led do pin 12 e activase o relé do pin 11
+    digitalWrite(Led2, LOW);
+    digitalWrite(Rele, LOW);
+    delay(4000); // Wait for 4000 millisecond(s)
+  }
+  else{}
+}
